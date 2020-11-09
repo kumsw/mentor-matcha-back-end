@@ -7,7 +7,8 @@
     "dev": "node app.js",
     "createMentorTable": "node -r dotenv/config ./db/scripts/createTableMentor.js",
     "createMenteeTable": "node -r dotenv/config ./db/scripts/createTableMentee.js",
-    "populateTableMentees": "node -r dotenv/config ./db/scripts/populateTable.js"
+    "populateTableMentees": "node -r dotenv/config ./db/scripts/populateTable.js",
+    "dropTable":" node -r dotenv/config ./db/scripts/dropTable.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
