@@ -18,8 +18,7 @@ async function matchMyersBriggs(value) {
     `
   SELECT Name
   FROM mentorTable
-  WHERE myerBriggs = value ($1)`,
-    [value.myersBriggs]
+  WHERE myersBriggs = ${value}`
   );
   return res;
 }
