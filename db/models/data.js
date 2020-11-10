@@ -1,17 +1,32 @@
 const { query } = require("../index");
 
-async function getAllData() {
+async function getAllMentor() {
   const res = await query(`
-    SELECT * FROM menteeTable INNERJOIN mentorTable;
+    SELECT * FROM mentorTable;
+    `);
+  return res.rows;
+}
+async function getAllMentee() {
+  const res = await query(`
+    SELECT * FROM menteeTable;
     `);
   return res.rows;
 }
 
-async function matchMyersBriggs() {
-  const res = await query(`
-    Select name, myersBriggs FROM  menteeTable INNER JOIN mentorTable WHERE 
-    `);
+async function matchMyersBriggs(value) {
+  const res = await query(
+    `
+  SELECT Name
+  FROM mentorTable
+  WHERE myerBriggs = value ($1)`,
+    [value.myersBriggs]
+  );
+  return res;
 }
+//SELECT Name
+// FROM mentorTable
+// WHERE myerBriggs = value
+// WHERE VALUES ($1), [value.name]
 
 async function insertIntoMentor(value) {
   const res = await query(
@@ -43,7 +58,8 @@ async function insertIntoMentee(value) {
 }
 
 module.exports = {
-  getAllData,
+  getAllMentor,
+  getAllMentee,
   matchMyersBriggs,
   insertIntoMentor,
   insertIntoMentee,
