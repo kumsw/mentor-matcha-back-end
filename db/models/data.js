@@ -19,7 +19,14 @@ async function insertIntoMentor(value) {
     INSERT INTO mentorTable (name, age, ethnicity, myersBriggs, experience)
     VALUES ($1, $2, $3, $4, $5)
     `,
-    [value]
+    [
+      value.name,
+      value.age,
+      value,
+      value.ethnicity,
+      value.myersBriggs,
+      value.experience,
+    ]
   );
   return res;
 }
