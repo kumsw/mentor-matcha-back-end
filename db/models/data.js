@@ -34,6 +34,17 @@ async function bootcamperMatch() {
   return res.rows;
 }
 
+//Test for Zaid
+async function testing(value) {
+  const res = await query(
+    `INSERT INTO mentorTable (name)
+        values ($1)`,
+    [value]
+  );
+  return res; //why res.rows?
+}
+//--------Test end---------//
+
 async function insertIntoMentor(value) {
   const res = await query(
     `
@@ -43,7 +54,6 @@ async function insertIntoMentor(value) {
     [
       value.name,
       value.age,
-      value,
       value.ethnicity,
       value.myersBriggs,
       value.experience,
@@ -58,7 +68,7 @@ async function insertIntoMentee(value) {
     INSERT INTO menteeTable (name, age, ethnicity, myersBriggs)
     VALUES ($1, $2, $3, $4)
     `,
-    [value]
+    [value.name, value.age, value.ethnicity, value.myersBriggs]
   );
   return res;
 }
@@ -70,4 +80,6 @@ module.exports = {
   insertIntoMentor,
   insertIntoMentee,
   bootcamperMatch,
+  testing,
+
 };
