@@ -6,6 +6,7 @@ const {
   matchMyersBriggs,
   insertIntoMentor,
   insertIntoMentee,
+  testing,
 } = require(`../db/models/data.js`);
 //Working
 router.get("/", function (req, res) {
@@ -49,12 +50,28 @@ router.post("/mentor", async function (req, res) {
 });
 
 router.post("/mentee", async function (req, res) {
-  const body = req.body;
-  if (!body.mentee) {
+  console.log("this is the post mentee request");
+  let body = req.body;
+  console.log("this is body", body);
+  // if (!body.mentee) {
+  //   return res.send("404 Error");
+  // }
+  const items = await insertIntoMentee(body);
+  console.log("this is items", items);
+  res.json(items);
+});
+
+//Zaid's test
+router.post("/test", async function (req, res) {
+  console.log("this is the post");
+  let body = req.body;
+  if (!body.todo) {
     return res.send("404 Error");
   }
-  const items = await insertIntoMentee;
-  req.json(items);
+  const items = await testing(req.body);
+  console.log(items);
+  res.json(items);
 });
+//---------Test End---------//
 
 module.exports = { router };
