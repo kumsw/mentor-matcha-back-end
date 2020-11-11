@@ -23,10 +23,9 @@ async function matchMyersBriggs() {
   );
   return res.rows;
 }
-//SELECT Name
-// FROM mentorTable
-// WHERE myerBriggs = value
-// WHERE VALUES ($1), [value.name]
+// SELECT Name, myersBriggs
+//   FROM mentorTable
+//   WHERE myersBriggs = ${value}`
 
 async function insertIntoMentor(value) {
   const res = await query(
