@@ -13,14 +13,15 @@ async function getAllMentee() {
   return res.rows;
 }
 
-async function matchMyersBriggs(value) {
+async function matchMyersBriggs() {
   const res = await query(
     `
-  SELECT Name
-  FROM mentorTable
-  WHERE myersBriggs = ${value}`
+  SELECT *
+  FROM mentorTable INNER JOIN menteeTable 
+  ON mentorTable.myersBriggs=menteeTable.myersBriggs
+  `
   );
-  return res;
+  return res.rows;
 }
 //SELECT Name
 // FROM mentorTable

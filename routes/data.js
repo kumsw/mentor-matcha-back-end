@@ -25,18 +25,18 @@ router.get("/mentee", async function (req, res) {
 
 //req.queryParameters -- object{}
 
-// router.get("/myersBriggs", async function (req, res) {
-//   //value will be passed down into models
-//   //how to get value from front end???
-//   const items = await matchMyersBriggs(value);
-//   res.json({ success: true, payload: items });
-// });
-
-router.patch("/:myersBriggs", function (req, res) {
-  const value = req.params.myersBriggs;
-  matchMyersBriggs(value);
-  return res.json({ success: true, payload: items });
+router.get("/myersBriggs", async function (req, res) {
+  //value will be passed down into models
+  //how to get value from front end???
+  const items = await matchMyersBriggs();
+  res.json({ success: true, payload: items });
 });
+
+// router.patch("/:myersBriggs", async function (req, res) {
+//   const value = req.params.myersBriggs;
+//   matchMyersBriggs(value);
+//   return res.json({ success: true });
+// });
 
 router.post("/mentor", async function (req, res) {
   let body = req.body;
