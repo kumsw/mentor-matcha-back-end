@@ -6,6 +6,7 @@ const {
   matchMyersBriggs,
   insertIntoMentor,
   insertIntoMentee,
+  bootcamperMatch,
 } = require(`../db/models/data.js`);
 //Working
 router.get("/", function (req, res) {
@@ -13,6 +14,7 @@ router.get("/", function (req, res) {
 });
 
 router.get("/mentor", async function (req, res) {
+  bootcamperMatch(req.query);
   const items = await getAllMentor();
   res.json({ success: true, payload: items });
 });
@@ -32,9 +34,11 @@ router.get("/myersBriggs", async function (req, res) {
   res.json({ success: true, payload: items });
 });
 
-// router.patch("/:myersBriggs", async function (req, res) {
-//   const value = req.params.myersBriggs;
-//   matchMyersBriggs(value);
+// //Bootcamper match -------
+// router.get("/:myersBriggs", async function (req, res) {
+//   const userInput = req.params.myersBriggs;
+//   console.log(userInput);
+//   bootcamperMatch(userInput);
 //   return res.json({ success: true });
 // });
 

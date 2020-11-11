@@ -23,9 +23,16 @@ async function matchMyersBriggs() {
   );
   return res.rows;
 }
-// SELECT Name, myersBriggs
-//   FROM mentorTable
-//   WHERE myersBriggs = ${value}`
+// function to match the bootcamper to mentor(s) on Myers briggs
+// write a search funtion which will use req.query
+async function bootcamperMatch() {
+  const res = await query(`
+  SELECT Name, myersBriggs
+  FROM mentorTable
+  WHERE myersBriggs = ${userInput}
+  `);
+  return res.rows;
+}
 
 async function insertIntoMentor(value) {
   const res = await query(
@@ -62,4 +69,5 @@ module.exports = {
   matchMyersBriggs,
   insertIntoMentor,
   insertIntoMentee,
+  bootcamperMatch,
 };
