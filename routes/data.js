@@ -40,13 +40,15 @@ router.get("/myersBriggs", async function (req, res) {
 // });
 
 router.post("/mentor", async function (req, res) {
+  console.log("this is the post mantor request");
   let body = req.body;
-  if (!body.mentor) {
-    //When fetching, make sure we add mentor
-    return res.send("404 Error");
-  }
+  console.log("this is body", body);
+  // if (!body.mentee) {
+  //   return res.send("404 Error");
+  // }
   const items = await insertIntoMentor(body);
-  req.json(items);
+  console.log("this is items", items);
+  res.json(items);
 });
 
 router.post("/mentee", async function (req, res) {
