@@ -15,9 +15,15 @@ router.get("/", function (req, res) {
 });
 
 router.get("/mentor", async function (req, res) {
-  bootcamperMatch(req.query);
-  const items = await getAllMentor();
-  res.json({ success: true, payload: items });
+  if (req.query) {
+    const userInput = req.query.myersBriggs;
+    console.log(userInput);
+    const items = await bootcamperMatch(userInput);
+    res.json({ success: true, payload: items });
+  } else {
+    const items = await getAllMentor();
+    res.json({ success: true, payload: items });
+  }
 });
 router.get("/mentee", async function (req, res) {
   const items = await getAllMentee();
