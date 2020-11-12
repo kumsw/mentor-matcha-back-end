@@ -1,5 +1,6 @@
 const { query } = require("../index");
 
+
 async function getAllMentor() {
   const res = await query(`
     SELECT * FROM mentorTable;
@@ -25,7 +26,7 @@ async function matchMyersBriggs() {
 }
 // function to match the bootcamper to mentor(s) on Myers briggs
 // write a search funtion which will use req.query
-async function bootcamperMatch() {
+async function bootcamperMatch(userInput) {
   const res = await query(`
   SELECT Name, myersBriggs
   FROM mentorTable

@@ -7,11 +7,16 @@
     "dev": "node app.js",
     "createMentorTable": "node -r dotenv/config ./db/scripts/createTableMentor.js",
     "createMenteeTable": "node -r dotenv/config ./db/scripts/createTableMentee.js",
-    "populateTableMentees": "node -r dotenv/config ./db/scripts/populateTable.js",
-    "dropTable": " node -r dotenv/config ./db/scripts/dropTable.js"
+    "populateTableMentees": "node -r dotenv/config ./db/scripts/teePopulateTable.js",
+    "populateTableMentors": "node -r dotenv/config ./db/scripts/torPopulateTable.js",
+    "dropTable": " node -r dotenv/config ./db/scripts/dropTable.js",
+    "menteeDeleteRows": " node -r dotenv/config ./db/scripts/menteeDeleteRows.js",
+    "mentorDeleteRows": " node -r dotenv/config ./db/scripts/mentorDeleteRows.js"
+
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
     "debug": "~2.6.9",
     "dotenv": "^8.2.0",
     "express": "^4.16.4",
