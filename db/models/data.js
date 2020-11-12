@@ -1,5 +1,6 @@
 const { query } = require("../index");
 
+
 async function getAllMentor() {
   const res = await query(`
     SELECT * FROM mentorTable;
