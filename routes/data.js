@@ -55,6 +55,13 @@ router.get("/myersBriggs", async function (req, res) {
 //   return res.json({ success: true });
 // });
 
+router.get("/bootcamperMatch", async function (req, res) {
+  const userInput = req.query.myersBriggs;
+  console.log(userInput);
+  const items = await bootcamperMatch(userInput);
+  res.json({ success: true, payload: items });
+});
+
 router.post("/mentor", async function (req, res) {
   console.log("this is the post mantor request");
   let body = req.body;
