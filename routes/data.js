@@ -15,16 +15,29 @@ router.get("/", function (req, res) {
 });
 
 router.get("/mentor", async function (req, res) {
-  const userInput = req.query.myersBriggs;
-  console.log(userInput)
-  const items = await bootcamperMatch(userInput);
+
+  // if (req.query) {
+  //   const userInput = req.query.myersBriggs;
+  //   console.log(userInput);
+  //   const items = await bootcamperMatch(userInput);
+  //   res.json({ success: true, payload: items });
+  // } else {
+  const items = await getAllMentor();
+
   res.json({ success: true, payload: items });
+  // }
 });
 router.get("/mentee", async function (req, res) {
   const items = await getAllMentee();
   res.json({ success: true, payload: items });
 });
 
+router.get("/bootcamperMatch", async function (req, res) {
+  const userInput = req.query.myersBriggs;
+  console.log(userInput);
+  const items = await bootcamperMatch(userInput);
+  res.json({ success: true, payload: items });
+});
 //Not working
 
 //req.queryParameters -- object{}
