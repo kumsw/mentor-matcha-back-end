@@ -5,14 +5,23 @@ async function populateMentors() {
   mentors.map(async function (value) {
     let res = await query(
       `
-            INSERT INTO mentorTable (name, age, ethnicity, myersBriggs, experience) VALUES ($1, $2, $3, $4, $5)
+            INSERT INTO mentorTable (firstName,
+              lastName,
+              introduction,
+              languages,
+              myersBriggs,
+              industry,
+              interests)
+            VALUES ($1, $2, $3, $4, $5, $6, $7)
         `,
       [
-        value.name,
-        value.age,
-        value.ethnicity,
+        value.firstName,
+        value.lastName,
+        value.introduction,
+        value.languages,
         value.myersBriggs,
-        value.experience,
+        value.industry,
+        value.interests,
       ]
     );
     console.log(res);

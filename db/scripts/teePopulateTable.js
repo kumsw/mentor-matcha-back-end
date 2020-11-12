@@ -2,17 +2,24 @@ const { query } = require("../index");
 
 let { mentees } = require("../collection");
 
- async function populateMentees() {
-   const sql = `INSERT INTO menteeTable (name, age, ethnicity, myersBriggs)
-     VALUES ($1, $2, $3, $4)`;
-   mentees.map(async function (value) {
-     let res = await query(sql, [
-       value.name,
-       value.age,
-       value.ethnicity,
-       value.myersBriggs,
-     ]);
-     console.log(res);
-   });
- }
- populateMentees();
+async function populateMentees() {
+  const sql = `INSERT INTO menteeTable (firstName ,
+    lastName ,
+    introduction ,
+    myersBriggs ,
+    industry ,
+    interests)
+     VALUES ($1, $2, $3, $4, $5, $6)`;
+  mentees.map(async function (value) {
+    let res = await query(sql, [
+      value.firstName,
+      value.lastName,
+      value.introduction,
+      value.myersBriggs,
+      value.industry,
+      value.interests,
+    ]);
+    console.log(res);
+  });
+}
+populateMentees();

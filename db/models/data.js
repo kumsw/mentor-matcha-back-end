@@ -1,6 +1,5 @@
 const { query } = require("../index");
 
-
 async function getAllMentor() {
   const res = await query(`
     SELECT * FROM mentorTable;
@@ -49,15 +48,23 @@ async function testing(value) {
 async function insertIntoMentor(value) {
   const res = await query(
     `
-    INSERT INTO mentorTable (name, age, ethnicity, myersBriggs, experience)
-    VALUES ($1, $2, $3, $4, $5)
+    INSERT INTO mentorTable (firstName,
+      lastName,
+      introduction,
+      languages,
+      myersBriggs,
+      industry,
+      interests)
+    VALUES ($1, $2, $3, $4, $5, $6, $7)
     `,
     [
-      value.name,
-      value.age,
-      value.ethnicity,
+      value.firstName,
+      value.lastName,
+      value.introduction,
+      value.languages,
       value.myersBriggs,
-      value.experience,
+      value.industry,
+      value.interests,
     ]
   );
   return res;
@@ -66,10 +73,22 @@ async function insertIntoMentor(value) {
 async function insertIntoMentee(value) {
   const res = await query(
     `
-    INSERT INTO menteeTable (name, age, ethnicity, myersBriggs)
-    VALUES ($1, $2, $3, $4)
+    INSERT INTO menteeTable (firstName ,
+      lastName ,
+      introduction ,
+      myersBriggs ,
+      industry ,
+      interests )
+    VALUES ($1, $2, $3, $4, $5, $6)
     `,
-    [value.name, value.age, value.ethnicity, value.myersBriggs]
+    [
+      value.firstName,
+      value.lastName,
+      value.introduction,
+      value.myersBriggs,
+      value.industry,
+      value.interests,
+    ]
   );
   return res;
 }

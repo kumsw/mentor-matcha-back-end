@@ -1,23 +1,41 @@
 const mentees = [
-  { name: "Ismail", age: 19, ethnicity: "Somali", myersBriggs: "ISTJ" },
-  { name: "Zaid", age: 24, ethnicity: "White", myersBriggs: "INTF" },
+  {
+    firstName: "Khang",
+    lastName: "Khuat",
+    introduction:
+      "Hi, I'm Khang and I'm a chef and spent most of my time improving my creativity through culinary arts. I now want to channel my passion for food into programming for the future.",
+    myersBriggs: "INFP",
+    industry: "Games Development",
+    interests: "Music",
+  },
+  {
+    firstName: "Ismail",
+    lastName: "Ali",
+    introduction: "I'm the best swimmer in Birmingham, no cap",
+    myersBriggs: "ISTJ",
+    industry: "DevOps",
+    interests: "Sports",
+  },
 ];
 
 const mentors = [
   {
-    name: "Ashligh Danks -  The man, the myth, the legend",
-    age: 20,
-    ethnicity: "White",
-    myersBriggs: "INTF",
-    experience: "LOADS",
+    firstName: "Bob",
+    lastName: "Smite",
+    introduction: "I'm everywhere",
+    languages: "JavaScript",
+    myersBriggs: "ISTJ",
+    industry: "DevOps",
+    interests: "Sports",
   },
   {
-    name: "Scottyyyyyy",
-    age: 21,
-    ethnicity: "White",
-    myersBriggs: "ISTJ",
-    experience:
-      "2 yeaes studying in bla bla bla using javascript at the university of who cares this is just an example",
+    firstName: "Boris",
+    lastName: "Johnson",
+    introduction: "I,I,I,I,I,I am,am, terribly incompetant",
+    languages: "C#",
+    myersBriggs: "ENTP",
+    industry: "Project Manager",
+    interests: "Sports",
   },
 ];
 
