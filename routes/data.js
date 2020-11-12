@@ -15,6 +15,7 @@ router.get("/", function (req, res) {
 });
 
 router.get("/mentor", async function (req, res) {
+
   // if (req.query) {
   //   const userInput = req.query.myersBriggs;
   //   console.log(userInput);
