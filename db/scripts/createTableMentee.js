@@ -4,10 +4,12 @@ async function createMenteeTable() {
   let res = await query(`
         CREATE TABLE menteeTable (
             id SERIAL PRIMARY KEY,
-            name TEXT,
-            age INTEGER,
-            ethnicity TEXT,
-            myersBriggs TEXT
+            firstName TEXT,
+            lastName TEXT,
+            introduction TEXT,
+            myersBriggs TEXT,
+            industry TEXT,
+            interests TEXT
         )
     `);
   console.log(res);
