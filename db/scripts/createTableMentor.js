@@ -4,11 +4,13 @@ async function createMentorTable() {
   let res = await query(`
         CREATE TABLE mentorTable (
             id SERIAL PRIMARY KEY,
-            name TEXT,
-            age INTEGER,
-            ethnicity TEXT,
+            firstName TEXT,
+            lastName TEXT,
+            introduction TEXT,
+            languages TEXT,
             myersBriggs TEXT,
-            experience TEXT
+            industry TEXT,
+            interests TEXT
         )
     `);
   console.log(res);
