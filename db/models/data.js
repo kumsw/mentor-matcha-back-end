@@ -27,9 +27,9 @@ async function matchMyersBriggs() {
 // write a search funtion which will use req.query
 async function bootcamperMatch(userInput) {
   const res = await query(`
-  SELECT Name, Myersbriggs
+  SELECT *
   FROM mentorTable
-  WHERE mentorTable.myersbriggs LIKE '${userInput}'
+  WHERE myersbriggs LIKE '${userInput}'
   `);
   return res.rows;
 }
