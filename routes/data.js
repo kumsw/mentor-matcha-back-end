@@ -7,7 +7,6 @@ const {
   insertIntoMentor,
   insertIntoMentee,
   bootcamperMatch,
-  testing,
 } = require(`../db/models/data.js`);
 //Working
 router.get("/", function (req, res) {
@@ -15,7 +14,6 @@ router.get("/", function (req, res) {
 });
 
 router.get("/mentor", async function (req, res) {
-
   // if (req.query) {
   //   const userInput = req.query.myersBriggs;
   //   console.log(userInput);
@@ -56,6 +54,13 @@ router.get("/myersBriggs", async function (req, res) {
 //   bootcamperMatch(userInput);
 //   return res.json({ success: true });
 // });
+
+router.get("/bootcamperMatch", async function (req, res) {
+  const userInput = req.query.myersBriggs;
+  console.log(userInput);
+  const items = await bootcamperMatch(userInput);
+  res.json({ success: true, payload: items });
+});
 
 router.post("/mentor", async function (req, res) {
   console.log("this is the post mantor request");

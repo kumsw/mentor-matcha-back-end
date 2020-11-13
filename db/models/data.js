@@ -34,28 +34,24 @@ async function bootcamperMatch(userInput) {
   return res.rows;
 }
 
-//Test for Zaid
-async function testing(value) {
-  const res = await query(
-    `INSERT INTO mentorTable (name)
-        values ($1)`,
-    [value]
-  );
-  return res; //why res.rows?
-}
-//--------Test end---------//
-
 async function insertIntoMentor(value) {
   const res = await query(
     `
-    INSERT INTO mentorTable (firstName,
+    INSERT INTO mentorTable (
+      firstName,
       lastName,
       introduction,
       languages,
       myersBriggs,
       industry,
-      interests)
-    VALUES ($1, $2, $3, $4, $5, $6, $7)
+      interests,
+      gpic,
+      gid,
+      gname,
+      gtime,
+      gemail
+      )
+    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
     `,
     [
       value.firstName,
@@ -65,6 +61,11 @@ async function insertIntoMentor(value) {
       value.myersBriggs,
       value.industry,
       value.interests,
+      value.gpic,
+      value.gid,
+      value.gname,
+      value.gtime,
+      value.gemail,
     ]
   );
   return res;
@@ -73,13 +74,20 @@ async function insertIntoMentor(value) {
 async function insertIntoMentee(value) {
   const res = await query(
     `
-    INSERT INTO menteeTable (firstName ,
+    INSERT INTO menteeTable (
+      firstName ,
       lastName ,
       introduction ,
       myersBriggs ,
       industry ,
-      interests )
-    VALUES ($1, $2, $3, $4, $5, $6)
+      interests ,
+      gpic,
+      gid,
+      gname,
+      gtime,
+      gemail
+      )
+    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
     `,
     [
       value.firstName,
@@ -88,6 +96,11 @@ async function insertIntoMentee(value) {
       value.myersBriggs,
       value.industry,
       value.interests,
+      value.gpic,
+      value.gid,
+      value.gname,
+      value.gtime,
+      value.gemail,
     ]
   );
   return res;
@@ -100,5 +113,4 @@ module.exports = {
   insertIntoMentor,
   insertIntoMentee,
   bootcamperMatch,
-  testing,
 };
