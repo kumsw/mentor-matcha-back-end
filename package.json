@@ -12,7 +12,6 @@
     "dropTable": " node -r dotenv/config ./db/scripts/dropTable.js",
     "menteeDeleteRows": " node -r dotenv/config ./db/scripts/menteeDeleteRows.js",
     "mentorDeleteRows": " node -r dotenv/config ./db/scripts/mentorDeleteRows.js"
-
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
