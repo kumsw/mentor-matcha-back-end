@@ -9,7 +9,12 @@ async function createMenteeTable() {
             introduction TEXT,
             myersBriggs TEXT,
             industry TEXT,
-            interests TEXT
+            interests TEXT,
+            gpic TEXT,
+            gid TEXT,
+            gname TEXT,
+            gtime TEXT,
+            gemail TEXT
         )
     `);
   console.log(res);

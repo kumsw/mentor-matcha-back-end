@@ -7,7 +7,6 @@ const {
   insertIntoMentor,
   insertIntoMentee,
   bootcamperMatch,
-  testing,
 } = require(`../db/models/data.js`);
 //Working
 router.get("/", function (req, res) {
@@ -15,7 +14,6 @@ router.get("/", function (req, res) {
 });
 
 router.get("/mentor", async function (req, res) {
-
   // if (req.query) {
   //   const userInput = req.query.myersBriggs;
   //   console.log(userInput);
