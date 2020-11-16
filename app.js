@@ -1,9 +1,9 @@
 const express = require("express");
 const { router } = require("./routes/data");
 
-// const port = 5000;
-const port = normalizePort(process.env.PORT || "5000");
-app.set("port", port);
+const port = 5000;
+// const port = normalizePort(process.env.PORT || "5000");
+// app.set("port", port);
 
 var bodyParser = require("body-parser");
 const cors = require("cors");
