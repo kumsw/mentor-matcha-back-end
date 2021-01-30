@@ -39,6 +39,8 @@ Clone the the frontend and backend repos. Download and install npm modules for b
     `npm i`<br/>
 4.  Add a .env file in the root of the frontend folder with the entry<br/>
     `REACT_APP_BACKEND_URL=http://www.localhost:5000`<br/>
+    `REACT_APP_AUTH0_DOMAIN={YOUR AUTH0 CREDENTIALS}`<br/>
+    `REACT_APP_AUTH0_CLIENT_ID={YOUR AUTH0 CREDENTIALS}`<br/>
 5.  Add a .env file in the root of the backend folder with the entry<br/>
     `DATABASE_URL`<br/>
 6.  Run the createMentorTable.js and createMenteeTable.js script from the backend folder.<br/>
