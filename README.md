@@ -4,7 +4,7 @@
 
 ##### November 2020
 
-This app is the product of a week long project. I worked in an agile team of five developers. I was voted as Project Manager for the week and I helped keep the group on track by managing our retros and stand ups, as well as resolving any conflicts that came up. We were given the brief: <br/> "Build an app that will enhance the mentoring experience".<br/>Our solution aimed to improve compatibility matching between mentor and mentee. We allocated a day for planning and we used Trello and Draw.io to map out initial ideas. We had a short three day coding sprint and on the last day we presented our app to an employee panel.
+This app is the product of a week long project. I worked in an agile team of five developers. I was voted as Project Manager for the week and I helped keep the group on track by managing our retros and stand ups, as well as resolving any conflicts that came up. We were given the brief: **"Build an app that will enhance the mentoring experience"** Our solution aimed to improve compatibility matching between mentor and mentee. We allocated a day for planning and we used Trello and Draw.io to map out initial ideas. We had a short three day coding sprint and on the last day we presented our app to an employee panel.
 
 ###### The Problem
 
@@ -22,8 +22,8 @@ This app is the product of a week long project. I worked in an agile team of fiv
 
 Mentor Matcher is hosted on Netlify: https://mentor-matcher.netlify.app
 
-[Frontend Repo](https://github.com/kumsw/mentor-matcher-front-end)
-[Backend Repo](https://github.com/kumsw/mentor-matcher-back-end)
+[Frontend Repo](https://github.com/kumsw/mentor-matcher-front-end)<br/>
+[Backend Repo](https://github.com/kumsw/mentor-matcher-back-end)<br/>
 
 ## To Start
 
@@ -52,8 +52,8 @@ Clone the the frontend and backend repos. Download and install npm modules for b
 
 ## Usage:
 
-This app consits of three pages. After login the user is directed to thier login page. Depending on the role of the user they should navigate to the **apply for programme** tab where they can fill in the respective mentor or mentee form and then get added to the database.
-The user can then navigate to the **find your match page** where they can input thier personality type or the opposite type and get a list of thier matches.
+This app consits of three pages. After login the user is directed to thier login page. Depending on the role of the user they should navigate to the _apply for programme_ tab where they can fill in the respective mentor or mentee form and then get added to the database.
+The user can then navigate to the _find your match page_ where they can input thier personality type or the opposite type and get a list of thier matches.
 
 ## Main learnings:
 
