@@ -18,7 +18,7 @@ This app is the product of a week long project. I worked in an agile team of fiv
 
 **Tech Stack:** HTML, CSS, JavaScript, React,JSX, dotenv, Express.js, Node.js, PostgreSQL, Auth0, Cloud hosted using Heroku and Netlify.
 
-### Take a look
+## Take a look
 
 Mentor Matcher is hosted on Netlify: https://mentor-matcher.netlify.app
 
@@ -43,17 +43,17 @@ Clone the the frontend and backend repos. Download and install npm modules for b
     `DATABASE_URL`<br/>
 6.  Run the createMentorTable.js and createMenteeTable.js script from the backend folder.<br/>
     `npm run createMentorTable`<br/>
-    `npm run createMentorTable`<br/>
-7.  Run the teePopulateTable.js and torPopulateTable.js script from the backend folder.
+    `npm run createMenteeTable`<br/>
+7.  Run the teePopulateTable.js and torPopulateTable.js script from the backend folder.<br/>
     `npm run teePopulateTable`<br/>
     `npm run torPopulateTable`<br/>
 8.  Open a terminal and start the backend and frontend using:<br/>
     `npm run start`<br/>
 
-## Usage:
+## Usage
 
-This app consits of three pages. After login the user is directed to thier login page. Depending on the role of the user they should navigate to the _apply for programme_ tab where they can fill in the respective mentor or mentee form and then get added to the database.
-The user can then navigate to the _find your match page_ where they can input thier personality type or the opposite type and get a list of thier matches.
+This app consits of three pages. After login the user is directed to thier login page. Depending on the role of the user they should navigate to the **_apply for programme_** tab where they can fill in the respective mentor or mentee form and then get added to the database.<br/>
+The user can then navigate to the **_find your match page_** where they can input thier personality type or the opposite type and get a list of thier matches.
 
 ## Main learnings:
 
